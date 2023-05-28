@@ -3,7 +3,9 @@ leftWristX = 0;
 leftWristY = 0;
 rightWristX = 0;
 rightWristY = 0;
-scoreLeftWristX = 0;
+scoreLeftWrist = 0;
+scoreRightWrist = 0;
+
 function preload()
 {
   song = loadSound("music.mp3");
@@ -82,8 +84,8 @@ function gotPoses()
 if (results.length > 0)
 {
   console.log(results);
-  scoreRightWrist = results[0].pose.ketypoints[10].score;
-  scoreLeftWrist = results[0].pose.ketypoints[9].score;
+  scoreRightWrist = results[0].pose.keypoints[10].score;
+  scoreLeftWrist = results[0].pose.keypoints[9].score;
   console.log("scoreRightWrist = " + scoreRightWrist + "ScoreLeftWrist = " + scoreLeftWrist);
   console.log("scoreLeftWrist = " + scoreLeftWrist);
   leftWristX = results[0].pose.leftWrist.x;
